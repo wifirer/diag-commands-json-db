@@ -1,0 +1,94 @@
+{
+    "data": [
+        {
+            "scope": "Radsess",
+            "commands": [
+                {
+                    "helpTooltip": "http://api.radsess.ti.ru/find",
+                    "title": "Сессия",
+                    "controls": [
+                        {
+                            "title": "Получить данные сессии",
+                            "element": "button",
+                            "icon": "triangle-right",
+                            "action": "GET_SESSION_DATA"
+                        },
+                        {
+                            "title": "Получить расширенные данные сессии",
+                            "element": "button",
+                            "icon": "magnifying-glass",
+                            "action": "GET_FULL_SESSION_DATA"
+                        },
+                        {
+                            "title": "Сбросить сессию",
+                            "element": "button",
+                            "icon": "cross",
+                            "action": "CLEAR_SESSION"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "scope": "Orange",
+            "commands": [
+                {
+                    "helpTooltip": "show ports XX",
+                    "title": "Состояние порта",
+                    "controls": [
+                        {
+                            "title": "Введите номер порта",
+                            "element": "input",
+                            "attributes": {
+                                "type": "number",
+                                "min": 1,
+                                "max": 24,
+                                "step": 1,
+                                "value": 1
+                            },
+                            "validationPattern": "^([1-9]|1[0-9]|2[0-4])$",
+                            "validationMessage": "Введите номер порта от 1 до 24"
+                        },
+                        {
+                            "title": "Выполнить",
+                            "element": "button",
+                            "icon": "triangle-right",
+                            "action": "GET_PORT_STATE"
+                        },
+                        {
+                            "title": "Вкл/Выкл порт",
+                            "element": "switch",
+                            "enabled": true,
+                            "action": "TURN_PORT_STATE"
+                        }
+                    ]
+                },
+                {
+                    "helpTooltip": "cable diag ports XX",
+                    "title": "Состояние кабеля",
+                    "controls": [
+                        {
+                            "title": "Введите номер порта",
+                            "element": "input",
+                            "attributes": {
+                                "type": "number",
+                                "min": 1,
+                                "max": 24,
+                                "step": 1,
+                                "value": 1
+                            },
+                            "validationPattern": "^([1-9]|1[0-9]|2[0-4])$",
+                            "validationMessage": "Введите номер порта от 1 до 24"
+                        },
+                        {
+                            "title": "Выполнить",
+                            "element": "button",
+                            "icon": "triangle-right",
+                            "action": "GET_CABLE_DIAG"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
